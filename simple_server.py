@@ -21,8 +21,8 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         return
  
 def run(port):
-  print('starting server at : ')
- 
+      
+  print('starting server at', port)
   # Server settings
   # Choose port 8080, for port 80, which is normally used for a http server, you need root access
   server_address = ('127.0.0.1', port)
