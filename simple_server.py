@@ -22,12 +22,13 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
  
 def run(port):
       
-  print('starting server at', port)
+  print('Starting server ...')
   # Server settings
   # Choose port 8080, for port 80, which is normally used for a http server, you need root access
   server_address = ('127.0.0.1', port)
   httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
-  print('running server...')
+  host='http://localhost:%s'%port
+  print('\033[0;37;46m Running server at',host)
   httpd.serve_forever()
 if __name__ == "__main__":
     from sys import argv
